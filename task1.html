@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cards</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+
+<section class="container">
+
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="profileimg">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar">
+        </div>
+
+        <div class="txt">
+            <h2>John Doe</h2>
+            <span>Web Developer</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="btn">
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="profileimg">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar">
+        </div>
+
+        <div class="txt">
+            <h2>Jane Smith</h2>
+            <span>UI Designer</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="btn">
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="profileimg">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar">
+        </div>
+
+        <div class="txt">
+            <h2>Ali Khan</h2>
+            <span>Backend Developer</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="btn">
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="profileimg">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar">
+        </div>
+
+        <div class="txt">
+            <h2>Sara Ahmed</h2>
+            <span>Frontend Developer</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="btn">
+            <button class="follow-btn">Follow</button>
+        </div>
+    </div>
+
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.follow-btn');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        if (button.innerText === 'Follow') {
+            button.innerText = 'Following';
+            button.classList.add('following');
+            button.style.backgroundColor = 'green';
+        } else {
+            button.innerText = 'Follow';
+            button.classList.remove('following');
+        }
+
+    });
+});
+</script>
+</body>
+</html>
